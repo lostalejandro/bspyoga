@@ -1,0 +1,5 @@
+WINEPREFIX=/media/alejandro/backup/Games/Lutris/Prefixes/Default winetricks cinepak d3dx9 d3dx9_24 d3dx10 d3dx11_42 d3dx11_43 vcrun2005 vcrun2008 vcrun2010 vcrun2012 vcrun2013 vcrun2015 vcrun2017 vcrun2019 vcrun6 vkd3d wsh57 dxvk quartz xact_x64 xinput physx dirac ffdshow gdiplus l3dcodecx 
+
+WINEPREFIX=/media/alejandro/backup/Games/Lutris/Prefixes/Default winetricks d3dcompiler_42 d3dcompiler_43 d3dcompiler_46 d3dcompiler_47
+
+WINEARCH=win64 WINEPREFIX=/media/alejandro/backup/Games/Lutris/Prefixes/Default winetricks dotnet35 dotnet40 dotnet45

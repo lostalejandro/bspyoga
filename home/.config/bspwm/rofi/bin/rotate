@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+DIR="$HOME/.config/bspwm"
+
+rofi_command="rofi -theme $DIR/rofi/themes/rotate.rasi"
+
+# Rotacion
+normal="Normal"
+inverted="Invertida"
+right="Derecha"
+left="Izquierda"
+
+# Variable passed to rofi
+options="$normal
+$inverted
+$right
+$left"
+
+# Functions
+
+chosen="$(echo "$options" | $rofi_command -p "Cambia la rotacion de la pantalla" -dmenu -selected-row 0)"
+case $chosen in
+    $normal)
+        sh ~/.config/bspwm/scripts/display/normal.sh
+        ;;
+    $inverted)
+        sh ~/.config/bspwm/scripts/display/inverted.sh
+        ;;
+    $right)
+        sh ~/.config/bspwm/scripts/display/right.sh
+        ;;                                                   
+    $left)                                                 
+        sh ~/.config/bspwm/scripts/display/left.sh
+        ;;                                                   
+esac
+
+
